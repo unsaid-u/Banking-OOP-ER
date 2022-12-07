@@ -1,0 +1,32 @@
+Banking Application
+
+Understanding basics of OOP and db 
+By desigining OOP structure and db design for a Banking Application
+
+
+tables :
+	Bank Accounts info
+	Transactions
+	Branch 
+
+
+	BANK_ACCOUNT									
+		account_no		char(20) [PK]<---|
+		name			varchar(100)	 |
+		contact no.		varchar(10)		 |				BRANCH
+		address			text			 |	  |------------>ifsc_code	 	char(10) [PK]
+		balance 		int				 |	  |				branch_name	 	varchar(100)	
+		branch_name		varchar(100)	 |	  |				address		 	text
+		ifsc_code		char(10) [FK]----|----|				contact no.		varchar(10)
+										 |
+										 |
+	TRANSACTIONS 						 |
+		t_id 		varchar(10)[PK]      |
+		t_time		datetime			 |
+		credit_amt	int					 |
+		debit_amt	int					 |
+		account_no	char(20) [FK]--------|
+
+
+
+	
